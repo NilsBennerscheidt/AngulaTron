@@ -1,0 +1,13 @@
+<h1>Astroids</h1>
+
+<div *ngFor="let neodDaily of neodList();let i = index" class="astroidContainer">
+    <h2 class="astroidDayHeader"> Tag </h2>
+    <div class="astroidDayList">
+        <div *ngFor="let neod of neodDaily ;let n = index" class="astroid">
+            <div>
+                <p class="Name">{{neod.name}}</p>
+
+            </div>
+        </div>
+    </div>
+</div>

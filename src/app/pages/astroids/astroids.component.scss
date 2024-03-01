@@ -1,0 +1,28 @@
+.astroidContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: "100%";
+}
+
+.astroidDayHeader {
+    width: "100%";
+}
+
+.astroidDayList{
+    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: row;
+
+}
+
+.astroidDay{
+    display: flex;
+    flex-wrap: row;
+}
+
+.astroid{
+    width: 20%;
+    height: 75px;
+
+}
