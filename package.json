@@ -1,13 +1,16 @@
 {
   "name": "angula-tron",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:AngulaTron": "node dist/angula-tron/server/server.mjs"
+    "serve:ssr:AngulaTron": "node dist/angula-tron/server/server.mjs",
+    "electron": "ng build && electron .",
+    "electron-package-win": "ng build && electron-packager . --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite" 
   },
   "private": true,
   "dependencies": {
@@ -23,6 +26,7 @@
     "@angular/platform-server": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@angular/ssr": "^17.2.1",
+    "electron-build": "^0.0.3",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -35,6 +39,8 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "electron": "^29.1.0",
+    "electron-packager": "^17.1.2",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

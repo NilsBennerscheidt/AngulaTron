@@ -63,7 +63,7 @@ export class DashboardComponent {
 
     this.nasaApiService.fetchData().subscribe((data: any) => {
       this.apod.set(data)
-      console.log(data)
+      // console.log(data)
     })
   }
 }
