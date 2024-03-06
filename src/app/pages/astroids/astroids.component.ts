@@ -45,6 +45,6 @@ export class AstroidsComponent implements OnInit {
       }
     })
     this.neodList.set(<any>neodList)
-
+    console.log(neodList)
   }
 }

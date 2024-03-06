@@ -26,7 +26,7 @@ import { CustomSidenavComponent } from './components/custom-sidenav/custom-siden
 export class AppComponent {
   title = 'AngulaTron';
 
-  collapsed = signal(false)
+  collapsed = signal(true)
 
   sidenavWidth = computed(() => this.collapsed() ? '60px': '250px')
 }

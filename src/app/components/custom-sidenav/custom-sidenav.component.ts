@@ -32,11 +32,11 @@ export type menuItem = {
 })
 export class CustomSidenavComponent {
   menuItems = signal<menuItem[]>([{
-    icon: 'dashboard',
-    label: 'Dashboard',
+    icon: 'crop_original',
+    label: 'Apod',
     route: 'dashboard'
   },{
-    icon: 'dashboard',
+    icon: 'report_problem',
     label: 'Astroids',
     route: 'astroids'
   }])

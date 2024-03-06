@@ -3,8 +3,8 @@
 <div *ngFor="let neodDaily of neodList();let i = index" class="astroidContainer">
     <h2 class="astroidDayHeader"> Tag </h2>
     <div class="astroidDayList">
-        <div *ngFor="let neod of neodDaily ;let n = index" class="astroid">
-            <div>
+        <div *ngFor="let neod of neodDaily ;let n = index" class="astroid  mat-drawer-inner-container  mat-elevation-z2">
+            <div class="innerAstroid">
                 <p class="Name">{{neod.name}}</p>
 
             </div>

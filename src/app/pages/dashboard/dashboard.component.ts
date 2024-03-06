@@ -18,11 +18,36 @@ export type apod = {
   standalone: true,
   imports: [HttpClientModule],
   template: `
-    <h1>Dashboard</h1>
-    <img src="{{apod().url}}">
+    <h1>Apod: {{apod().title}}</h1>
+    <div class="apodContainer">
+      <div class="apodContainerInner">
+        <img class="apodImg" src="{{apod().url}}">
+        <p class="apodDescription">
+          <strong>Description:<br></strong>
+          {{apod().explanation}}
+        </p>
+      </div>
+    </div>
 
   `,
-  styles: ``
+  styles: `
+    .apodContainer{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    };
+    .apodContainerInner{
+      width: 80dvw;
+      max-width: 800px;
+    };
+    .apodImg{
+      margin-top: 50px;
+      width: 100%;
+    };
+    .apodDescription{
+      margin-top: 15px;
+    }
+  `
 })
 export class DashboardComponent {
   httpClient = inject(HttpClient);
