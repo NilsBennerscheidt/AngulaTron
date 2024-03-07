@@ -11,7 +11,8 @@
     "serve:ssr:AngulaTron": "node dist/angula-tron/server/server.mjs",
     "electron": "ng build && electron .",
     "electron-package-win": "ng build && electron-packager . --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --win",
-    "electron-package-linux": "ng build && electron-packager . --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --linux" 
+    "electron-package-linux": "ng build && electron-packager . --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --linux", 
+    "electron-package-full": "ng build && electron-packager . --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --all" 
   },
   "private": true,
   "dependencies": {

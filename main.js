@@ -9,10 +9,12 @@ function createWindow() {
         width: 1000,
         height: 800,
         resizable: false,
+        autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true,
-            devTools: false
-        }
+            devTools: true
+        },
+        titleBarStyle: 'hiddenInset'
     })
 
     mainWindow.loadURL(
