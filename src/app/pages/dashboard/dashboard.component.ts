@@ -59,11 +59,12 @@ export class DashboardComponent {
     this.getAstroids();
   }
 
+  /**
+   * Get the APOD
+   */
   getAstroids() {
-
     this.nasaApiService.fetchData().subscribe((data: any) => {
       this.apod.set(data)
-      // console.log(data)
     })
   }
 }

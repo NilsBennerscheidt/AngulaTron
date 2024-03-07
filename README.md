@@ -1,5 +1,5 @@
 # AngulaTron
-This is a simple Angular App
+This is my simple Angular App
 
 ## Get startet
 Install `node.js`
@@ -17,10 +17,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Build .exe
 
-Run `electron-package-win` to build the project and create a Windows executable. The build artifacts will be stored in the `dist/` directory.
-Run `electron-package-linux` to build the project. The build artifacts will be stored in the `dist/` directory.
-Run `electron-package-full` to build the project. The build artifacts will be stored in the `dist/` directory.
-
+Run `electron-package-win` to build the project and create a Windows executable. The build artifacts will be stored in the `/angula-tron-win*` directory.
+Run `electron-package-linux` to build into folder starting with `/angula-tron-*` and ending on the operatingsystem.
 
 
 

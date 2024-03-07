@@ -65,3 +65,9 @@ export interface NEOFeedResponse {
     element_count: number;
     near_earth_objects: NearEarthObjects;
 }
+
+
+export interface NearEarthObjectFormatted {
+    date: string
+    data: NearEarthObject[];
+  }
