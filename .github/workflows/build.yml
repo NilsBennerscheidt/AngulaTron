@@ -1,12 +1,14 @@
 on: push
 jobs:
-  first-job:
+  build-dist:
     runs-on: ubuntu-latest
     steps:
-      - run: node --version
-      - run: npm --version
+      - name: Check node.js version
+        run: node --version
+      - name: Check npm version
+        run: npm --version
       - name: Chackout Code
         uses: actions/checkout@v2
       - name: Install dependencies 
         run: npm install
-      - run: npm run electron 
+      - run: npm run build 
