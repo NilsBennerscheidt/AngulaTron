@@ -26,8 +26,8 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Download Artifact
+    - name: Download angulatron
       uses: actions/download-artifact@v2
       with:
-        name: angular-app
+        name: angulatron
         path: dist/
