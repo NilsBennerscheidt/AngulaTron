@@ -1,5 +1,10 @@
-on: push
+# Only when pushed to the Masterbranch
+on: 
+  push:
+    branches: ['main']
+
 jobs:
+  # Build the Distribution
   build-dist:
     runs-on: ubuntu-latest
     steps:
@@ -18,7 +23,7 @@ jobs:
         with:
           name: angulatron
           path: dist/
-
+  # Make the Created Artifact containing the dist downloadable
   deploy:
     runs-on: ubuntu-latest
     needs: build-dist
