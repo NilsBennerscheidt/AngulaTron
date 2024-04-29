@@ -33,3 +33,9 @@ $Itemcolor: rgb(255,255,255, 1);
 .innerAstroid{
     padding: 5px;
 }
+
+.header{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
