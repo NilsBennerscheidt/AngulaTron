@@ -6,7 +6,7 @@
             <mat-label>Enter a date range</mat-label>
             <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
               <input matStartDate formControlName="start" placeholder="Start date">
-              <input matEndDate formControlName="end" placeholder="End date">
+              <input matEndDate formControlName="end" placeholder="End date" (dateChange)="onDateChange('end', $event)">
             </mat-date-range-input>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-date-range-picker #picker></mat-date-range-picker>
@@ -20,10 +20,10 @@
           </mat-form-field>
     </div>
 </div>
-<div *ngFor="let neodDaily of neodList();let i = index" class="astroidContainer">
+<div *ngFor="let neodDaily of neodList() | sortNeodByDate;let i = index" class="astroidContainer">
     <h2 class="astroidDayHeader"> {{neodDaily.date}} </h2>
     <div class="astroidDayList">
-        <div *ngFor="let neod of neodDaily.data; let n = index"
+        <div *ngFor="let neod of neodDaily.data ; let n = index"
             class="astroid  mat-drawer-inner-container  mat-elevation-z2">
             <div class="innerAstroid">
                 <p class="Name">
